@@ -10,10 +10,6 @@ sudo dnf -y update
 clear
 
 echo "Adding Microsoft repos"
-## Register Visual Studio Code repo
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-
 ## Register the Microsoft RedHat repository
 curl https://packages.microsoft.com/config/rhel/8/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 
@@ -22,14 +18,9 @@ clear
 echo "Installing software..."
 ## Install PowerShell, VSCode
 sudo dnf -y check-update
-sudo dnf -y install git epel-release virt-manager snapd code powershell seahorse gtkhash
-
-## Enable snapd
-sudo systemctl enable --now snapd.socket
-## Enable classic snap support
-sudo ln -s /var/lib/snapd/snap /snap
+sudo dnf -y install git epel-release virt-manager flatpak powershell gtkhash
+sudo flatpak install -y flathub com.visualstudio.code org.gnome.seahorse.Application org.videolan.VLC
 
 clear
 
 echo "Complete"
-
