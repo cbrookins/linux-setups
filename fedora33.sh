@@ -15,10 +15,6 @@ sudo dnf -y install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-r
 clear
 
 echo "Adding Microsoft repos"
-## Register Visual Studio Code repo
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-
 ## Register the Microsoft RedHat repository
 curl https://packages.microsoft.com/config/fedora/33/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
 curl https://packages.microsoft.com/config/rhel/7/prod.repo | sudo tee /etc/yum.repos.d/microsoft.repo
@@ -27,7 +23,8 @@ clear
 
 echo "Installing software..."
 sudo dnf -y check-update
-sudo dnf -y install code kernel-devel broadcom-wl compat-openssl10 seahorse gtkhash ffmpeg ffmpeg-libs vlc fuse-exfat exfat-utils peek powershell dkms
+sudo dnf -y install kernel-devel broadcom-wl compat-openssl10 gtkhash ffmpeg ffmpeg-libs fuse-exfat exfat-utils peek powershell dkms
+sudo flatpak install -y flathub com.visualstudio.code org.gnome.seahorse.Application org.videolan.VLC
 
 clear
 
