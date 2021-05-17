@@ -23,13 +23,15 @@ clear
 
 echo "Installing software..."
 sudo dnf -y check-update
-sudo dnf -y install kernel-devel broadcom-wl compat-openssl10 gtkhash ffmpeg ffmpeg-libs fuse-exfat exfat-utils peek powershell dkms
+sudo dnf -y install gtkhash compat-openssl10 ffmpeg ffmpeg-libs fuse-exfat exfat-utils peek powershell
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo flatpak install -y flathub com.visualstudio.code org.gnome.seahorse.Application org.videolan.VLC
 
 clear
 
 ## Enable BCM43228 WiFi Card
 echo "Prepping WiFi Kernel Module.."
+sudo dnf install -y kernel-devel broadcom-wl dkms
 git clone https://github.com/antoineco/broadcom-wl
 dkms add ./broadcom-wl
 
@@ -37,9 +39,9 @@ clear
 
 ## PIA Client
 echo "Setting up PIA"
-wget https://www.privateinternetaccess.com/openvpn/openvpn-nextgen.zip
+wget https://www.privateinternetaccess.com/openvpn/openvpn.zip
 unzip openvpn-nextgen.zip
-nmcli connection import type openvpn file ./Netherlands.ovpn
+nmcli connection import type openvpn file ./netherlands.ovpn
 
 clear
 
