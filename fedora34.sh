@@ -33,14 +33,14 @@ clear
 #echo "Prepping WiFi Kernel Module.."
 #sudo dnf install -y kernel-devel broadcom-wl dkms
 #git clone https://github.com/antoineco/broadcom-wl
-#dkms add ./broadcom-wl
+#sudo dkms add ./broadcom-wl
 
 clear
 
 ## PIA Client
 echo "Setting up PIA"
 wget https://www.privateinternetaccess.com/openvpn/openvpn.zip
-unzip openvpn-nextgen.zip
+unzip openvpn.zip
 nmcli connection import type openvpn file ./netherlands.ovpn
 
 clear
