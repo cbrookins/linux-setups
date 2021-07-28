@@ -3,7 +3,7 @@ Various Linux workstation setup scripts.
 
 fedora 34
 ```
-  curl https://raw.githubusercontent.com/therealc2c2/linux-setups/fedora/bootstrap.sh | sh
+  curl https://raw.githubusercontent.com/therealc2c2/linux-setups/bootstrap.sh | sh
 ```
 
 ***
