@@ -7,9 +7,9 @@ if ! command -v sudo >/dev/null 2>&1; then
 	exit 1
 fi
 
-sudo dnf install -y ansible
+sudo dnf install -y git ansible
 
-git clone https://github.com/therealc2c2/linux-setups && cd linux-setups/fedora
+git clone https://github.com/therealc2c2/linux-setups && cd linux-setups
 
 ansible-galaxy collection install community.general
-ansible-playbook main.yml
+ansible-playbook bootstrap.yml

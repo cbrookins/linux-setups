@@ -1,0 +1,44 @@
+---
+- name: Add Microsoft repository
+  yum_repository:
+    name: rhel
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    description: Microsoft repos
+    file: microsoft
+    baseurl: https://packages.microsoft.com/rhel/8/prod
+
+- name: Install packages
+  dnf:
+    name:
+      - epel-release
+      - arduino
+      - curl
+      - firefox
+      - git
+      - gnupg
+      - gzip
+      - hashcat
+      - htop
+      - httping
+      - iftop
+      - llvm
+      - netcat
+      - nmap
+      - openssl
+      - p7zip
+      - unzip
+      - wget
+      - whois
+      - zmap
+      - zsh
+      - gtkhash
+      - ffmpeg
+      - ffmpeg-libs
+      - fuse-exfat
+      - exfat-utils
+      - peek
+      - powershell
+    update_cache: yes
+    state: latest
