@@ -2,7 +2,7 @@
 - name: Download broadcom-wl
   git:
     repo: 'https://github.com/antoineco/broadcom-wl.git'
-    dest: tasks/broadcom-wl
+    dest: ./broadcom-wl
 
 - name: Verify needed packages
   dnf:
@@ -14,9 +14,9 @@
 
 - name: Install kernel module
   command:
-    cmd: dkms add tasks/broadcom-wl
+    cmd: dkms add ./broadcom-wl
 
 - name: Cleanup broadcom-wl
   file:
-    path: tasks/broadcom-wl
+    path: ./broadcom-wl
     state: absent

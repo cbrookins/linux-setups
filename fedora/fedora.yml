@@ -3,6 +3,6 @@
   - include_tasks: tasks/dnf.yml
   - include_tasks: tasks/flatpak.yml
   - include_tasks: tasks/broadcom-wl.yml
-    when: ansible_facts['product_name'] == ''
+    when: ansible_facts['product_name'] == '334777U'
   - include_tasks: tasks/pia.yml
   - include_tasks: tasks/reboot.yml
