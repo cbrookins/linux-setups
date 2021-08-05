@@ -2,20 +2,19 @@
 - name: Install i3
   dnf:
     name:
-     - '@i3 desktop'
-     - fuse-exfat
-     - exfat-utils
-     - htop
-     - git
-     - unzip
-     - p7zip
-     - zmap
-     - nmap
-     - netcat
-     - gzip
-     - curl
-     - gnupg
-     - whois
-     - wget
-     - openssl
-  state: latest
+      - '@i3 desktop'
+      - exfatprogs
+      - htop
+      - git
+      - unzip
+      - p7zip
+      - zmap
+      - nmap
+      - netcat
+      - gzip
+      - curl
+      - gnupg
+      - whois
+      - wget
+      - openssl
+    state: latest
