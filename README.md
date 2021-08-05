@@ -1,7 +1,7 @@
 # Linux Setup Scripts
 Various Linux workstation setup scripts.
 
-fedora 34
+Bootstrap
 ```
   curl https://raw.githubusercontent.com/theRealc2c2/linux-setups/main/bootstrap.sh | sh
 ```
