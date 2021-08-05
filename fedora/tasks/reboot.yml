@@ -2,3 +2,4 @@
 - name: Reboot
   command:
     cmd: shutdown -r now
+  become: yes

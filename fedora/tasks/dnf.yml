@@ -4,6 +4,7 @@
     name: epel
     description: EPEL repo
     baseurl: https://download.fedoraproject.org/pub/epel/{{ansible_distribution_major_version}}/$basearch/
+  become: yes
 
 - name: Add Microsoft repository (1/2)
   yum_repository:
@@ -14,6 +15,7 @@
     description: Microsoft repos
     file: microsoft
     baseurl: https://packages.microsoft.com/fedora/{{ansible_distribution_major_version}}/prod
+  become: yes
 
 - name: Add Microsoft repository (2/2)
   yum_repository:
@@ -24,6 +26,7 @@
     description: Microsoft repos
     file: microsoft
     baseurl: https://packages.microsoft.com/rhel/8/prod
+  become: yes
 
 - name: Add RPM Fusion repositories
   dnf:
@@ -32,6 +35,7 @@
       - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_major_version}}.noarch.rpm
     state: present
     disable_gpg_check: yes
+  become: yes
 
 - name: Install packages
   dnf:
@@ -65,3 +69,4 @@
       - powershell
     update_cache: yes
     state: latest
+  become: yes
