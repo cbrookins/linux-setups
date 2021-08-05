@@ -18,3 +18,16 @@
       - wget
       - openssl
     state: latest
+
+- name: Touch .xinitrc
+  file:
+    path: /home/{{ ansible_user_id }}/.xinitrc
+    state: touch
+    owner: "{{ ansible_user_id }}"
+    mode: '0744'
+
+- name: Edit .xinitrc
+  lineinfile:
+    dest: /home/{{ ansible_user_id }}/.xinitrc
+    line: 'exec i3'
+    state: present
