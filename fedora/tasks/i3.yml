@@ -18,6 +18,7 @@
       - wget
       - openssl
     state: latest
+  become: yes
 
 - name: Touch .xinitrc
   file:
