@@ -1,0 +1,8 @@
+---
+- name: Extend partition
+  command: growpart /dev/mmcblk0 3
+  become: yes
+  
+- name: Extend volume
+  command: resize2fs /dev/mmcblk0p3
+  become: yes
