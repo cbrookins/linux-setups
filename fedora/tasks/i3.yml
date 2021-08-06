@@ -32,3 +32,17 @@
     dest: /home/{{ ansible_user_id }}/.xinitrc
     line: 'exec i3'
     state: present
+    
+- name: Copy i3 config
+  copy:
+    src: i3config
+    dest: ~/.config/i3/config
+    owner: "{{ ansible_user_id }}"
+    mode: '0744'
+
+- name: Copy i3status config
+  copy:
+    src: i3statusconfig
+    dest: ~/.config/i3status/config
+    owner: "{{ ansible_user_id }}"
+    mode: '0744'
