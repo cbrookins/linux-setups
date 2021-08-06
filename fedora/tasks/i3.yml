@@ -39,7 +39,7 @@
 
 - name: Touch .config/i3
   file:
-    path: /home/{{ ansible_user_id }}/.config/i3
+    path: /home/{{ ansible_user_id }}/.config/i3/
     state: touch
     owner: "{{ ansible_user_id }}"
     mode: '0744'
@@ -53,7 +53,7 @@
 
 - name: Touch .config/i3status
   file:
-    path: /home/{{ ansible_user_id }}/.config/i3status
+    path: /home/{{ ansible_user_id }}/.config/i3status/
     state: touch
     owner: "{{ ansible_user_id }}"
     mode: '0744'
