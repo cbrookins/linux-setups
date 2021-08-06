@@ -7,9 +7,6 @@
   - include_tasks: tasks/dnf.yml
     when: ansible_facts['memtotal_mb'] > 1000
   
-  - include_tasks: tasks/i3.yml
-    when: ansible_facts['memtotal_mb'] < 1000
-  
   - include_tasks: tasks/flatpak.yml
     when: ansible_facts['memtotal_mb'] > 1000
   
