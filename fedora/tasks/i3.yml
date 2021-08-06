@@ -58,7 +58,7 @@
     owner: "{{ ansible_user_id }}"
     mode: '0744'
 
-- name: Touch .config/i3status
+- name: mkdir .config/i3status
   file:
     path: /home/{{ ansible_user_id }}/.config/i3status
     state: directory
