@@ -17,6 +17,10 @@
       - whois
       - wget
       - openssl
+      - fontawesome-fonts
+      - nitrogen
+      - alsa-utils
+      - rxvt-unicode
     state: latest
   become: yes
 
