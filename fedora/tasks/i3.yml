@@ -37,6 +37,13 @@
     line: 'exec i3'
     state: present
 
+- name: Touch .config
+  file:
+    path: /home/{{ ansible_user_id }}/.config/
+    state: touch
+    owner: "{{ ansible_user_id }}"
+    mode: '0744'
+
 - name: Touch .config/i3
   file:
     path: /home/{{ ansible_user_id }}/.config/i3/
