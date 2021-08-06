@@ -37,17 +37,17 @@
     line: 'exec i3'
     state: present
 
-- name: Touch .config
+- name: mkdir .config
   file:
-    path: /home/{{ ansible_user_id }}/.config/
-    state: touch
+    path: /home/{{ ansible_user_id }}/.config
+    state: directory
     owner: "{{ ansible_user_id }}"
     mode: '0744'
 
-- name: Touch .config/i3
+- name: mkdir .config/i3
   file:
-    path: /home/{{ ansible_user_id }}/.config/i3/
-    state: touch
+    path: /home/{{ ansible_user_id }}/.config/i3
+    state: directory
     owner: "{{ ansible_user_id }}"
     mode: '0744'
     
@@ -60,8 +60,8 @@
 
 - name: Touch .config/i3status
   file:
-    path: /home/{{ ansible_user_id }}/.config/i3status/
-    state: touch
+    path: /home/{{ ansible_user_id }}/.config/i3status
+    state: directory
     owner: "{{ ansible_user_id }}"
     mode: '0744'
 
