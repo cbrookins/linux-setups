@@ -13,9 +13,7 @@
   dnf:
     name:
       - epel-release
-      - arduino
       - curl
-      - firefox
       - git
       - gnupg
       - gzip
@@ -23,7 +21,6 @@
       - htop
       - httping
       - iftop
-      - llvm
       - netcat
       - nmap
       - openssl
@@ -32,7 +29,6 @@
       - wget
       - whois
       - zmap
-      - zsh
       - gtkhash
       - ffmpeg
       - ffmpeg-libs
@@ -40,5 +36,6 @@
       - exfat-utils
       - peek
       - powershell
+      - virt-manager
     update_cache: yes
     state: latest
