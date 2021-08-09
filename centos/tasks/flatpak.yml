@@ -4,6 +4,7 @@
     name: flathub
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+  become: yes
 
 - name: Install flatpaks
   community.general.flatpak:
@@ -11,3 +12,4 @@
       - com.visualstudio.code
       - org.gnome.seahorse.Application
       - org.videolan.VLC
+  become: yes
