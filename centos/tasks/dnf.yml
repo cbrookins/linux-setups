@@ -36,14 +36,12 @@
       - git
       - gnupg
       - gzip
-      - hashcat
       - htop
       - nmap
       - openssl
       - unzip
       - wget
       - whois
-      - exfatprogs
       - powershell
       - virt-manager
     update_cache: yes
