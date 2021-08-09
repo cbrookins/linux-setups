@@ -1,8 +1,4 @@
 ---
-- name: CentOS playbook
-  hosts: all
-
-
   tasks:
     - include_tasks: tasks/update.yml
     - include_tasks: tasks/dnf.yml
