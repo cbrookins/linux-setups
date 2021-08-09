@@ -36,7 +36,6 @@
       - git
       - gnupg
       - gzip
-      - htop
       - nmap
       - openssl
       - unzip
