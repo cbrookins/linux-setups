@@ -17,6 +17,17 @@
     state: present
     disable_gpg_check: yes
   become: yes
+  
+- name: Add CentOS Plus
+  yum_repository:
+    name: rhel
+    enabled: yes
+    gpgcheck: yes
+    gpgkey: http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-8
+    description: CentOS Plus repos
+    file: centos-plus
+    mirrorlist: http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus 
+  become: yes
 
 - name: Install packages
   dnf:
@@ -35,9 +46,7 @@
       - gtkhash
       - ffmpeg
       - ffmpeg-libs
-      - fuse-exfat
-      - exfat-utils
-      - peek
+      - exfatprogs
       - powershell
       - virt-manager
     update_cache: yes
