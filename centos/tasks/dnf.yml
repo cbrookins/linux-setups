@@ -8,6 +8,7 @@
     description: Microsoft repos
     file: microsoft
     baseurl: https://packages.microsoft.com/rhel/8/prod
+  become: yes
 
 - name: Install packages
   dnf:
@@ -39,3 +40,4 @@
       - virt-manager
     update_cache: yes
     state: latest
+  become: yes
