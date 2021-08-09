@@ -9,13 +9,20 @@
     file: microsoft
     baseurl: https://packages.microsoft.com/rhel/8/prod
   become: yes
-  
-- name: Add Epel
-  dnf:
-    name: 
-      - http://download.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-    state: present
+
+- name: Add EPEL repository
+  yum_repository:
+    name: epel
+    description: EPEL repo
+    baseurl: https://download.fedoraproject.org/pub/epel/{{ansible_distribution_major_version}}/$basearch/
   become: yes
+  
+#- name: Add Epel
+#  dnf:
+#    name: 
+#      - http://download.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+#    state: present
+#  become: yes
 
 - name: Install packages
   dnf:
