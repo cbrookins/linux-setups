@@ -1,6 +1,5 @@
 ---
-  tasks:
-    - include_tasks: tasks/update.yml
-    - include_tasks: tasks/dnf.yml
-    - include_tasks: tasks/flatpak.yml
-    - include_tasks: tasks/reboot.yml
+  - include_tasks: tasks/update.yml
+  - include_tasks: tasks/dnf.yml
+  - include_tasks: tasks/flatpak.yml
+  - include_tasks: tasks/reboot.yml
