@@ -20,7 +20,7 @@
   
 - name: Add CentOS Plus
   yum_repository:
-    name: rhel
+    name: centosplus
     enabled: yes
     gpgcheck: yes
     gpgkey: http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-8
@@ -43,9 +43,6 @@
       - unzip
       - wget
       - whois
-      - gtkhash
-      - ffmpeg
-      - ffmpeg-libs
       - exfatprogs
       - powershell
       - virt-manager
