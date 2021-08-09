@@ -7,7 +7,22 @@ if ! command -v sudo >/dev/null 2>&1; then
 	exit 1
 fi
 
-sudo dnf install -y git ansible
+echo "[1] Cent OS"
+echo "[2] Fedora"
+echo "[3] Ubuntu"
+echo "Enter 1-3"
+read input
+
+if [$input == 1] then
+	sudo dnf install -y git centos-release-ansible-29
+elif [$input == 2] then
+	sudo dnf install -y git ansible
+elif [$input == 3] then
+	sudo apt install -y git ansible
+else
+	echo "incorrect input"
+	break
+fi
 
 git clone https://github.com/therealc2c2/linux-setups && cd linux-setups
 
