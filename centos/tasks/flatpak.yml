@@ -12,4 +12,9 @@
       - com.visualstudio.code
       - org.gnome.seahorse.Application
       - org.videolan.VLC
+      - org.gtkhash.gtkhash
+      - us.zoom.Zoom
+      - com.microsoft.Teams
+      - com.spotify.Client
+      - com.uploadedlobster.peek
   become: yes
