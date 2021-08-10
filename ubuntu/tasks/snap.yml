@@ -1,0 +1,14 @@
+---
+- name: Install snaps (--classic)
+  community.general.snap:
+    name:
+      - code
+      - powershell
+    classic: yes
+  become: yes
+    
+- name: Instal snaps
+  community.general.snap:
+    name:
+      - teams
+  become: yes
