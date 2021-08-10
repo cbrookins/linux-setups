@@ -1,5 +1,6 @@
 ---
   - include_tasks: tasks/update.yml
   - include_tasks: tasks/apt.yml
+  - include_tasks: tasks/misc.yml
   - include_tasks: tasks/snapd.yml
   - include_tasks: tasks/reboot.yml
