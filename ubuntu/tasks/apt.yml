@@ -19,5 +19,6 @@
       - exfat-utils
       - gtkhash
       - virt-manager
+      - gnome-tweak-tool
     state: latest
   become: yes
