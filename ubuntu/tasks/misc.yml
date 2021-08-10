@@ -1,6 +1,9 @@
 ---
 - name: Download focalgdm3
-  command: "wget -qO - https://github.com/PRATAP-KUMAR/focalgdm3/archive/TrailRun.tar.gz | tar zx --strip-components=1 focalgdm3-TrailRun/focalgdm3"
+  get_url: 
+    url: https://raw.githubusercontent.com/PRATAP-KUMAR/focalgdm3/TrailRun/focalgdm3
+    dest: ./
+    mode: u+rwx,g-rwx,o-rwx
 
 - name: Update login screen color
   command: ./focalgdm3 \#000000
