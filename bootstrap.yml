@@ -10,5 +10,5 @@
       when: ansible_facts['distribution'] == "CentOS"
     - include_tasks: fedora/fedora.yml
       when: ansible_facts['distribution'] == "Fedora"
-    - include_taslks: ubuntu/ubuntu.yml
+    - include_tasks: ubuntu/ubuntu.yml
       when: ansible_facts['distribution'] == "Ubuntu"
