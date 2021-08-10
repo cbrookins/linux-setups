@@ -4,10 +4,6 @@
     repo: deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} main universe restricted
     state: present
   become: yes
-    
-- name: Install Microsoft repo
-  command: curl -sSL https://packages.microsoft.com/config/ubuntu/20.04/prod.list | sudo tee /etc/apt/sources.list.d/microsoft-prod.list
-  become: yes
 
 - name: Install software
   apt:
@@ -15,6 +11,5 @@
       - git
       - ansible
       - virt-manager
-      - 
     state: latest
   become: yes
