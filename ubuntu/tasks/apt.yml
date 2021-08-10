@@ -5,11 +5,18 @@
     state: present
   become: yes
 
+- name: Install Zoom client
+  apt:
+    deb: https://zoom.us/client/latest/zoom_amd64.deb
+
 - name: Install software
   apt:
     name:
       - git
       - ansible
+      - exfat-fuse
+      - exfat-utils
+      - gtkhash
       - virt-manager
     state: latest
   become: yes
