@@ -20,5 +20,6 @@
       - gtkhash
       - virt-manager
       - gnome-tweak-tool
+      - libglib2.0-dev
     state: latest
   become: yes
