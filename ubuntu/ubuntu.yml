@@ -3,6 +3,6 @@
   - include_tasks: tasks/apt.yml
   - include_tasks: tasks/misc.yml
   - include_tasks: tasks/snapd.yml
-  - include_tasks: tasks/pia.ym
+  - include_tasks: tasks/pia.yml
     when: ansible_facts['product_name'] is not match("20A8*")
   - include_tasks: tasks/reboot.yml
