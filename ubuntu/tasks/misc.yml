@@ -1,7 +1,7 @@
 ---
 - name: Download focalgdm3
   get_url: 
-    url: https://raw.githubusercontent.com/theRealc2c2/focalgdm3/master/focalgdm3
+    url: https://raw.githubusercontent.com/theRealc2c2/focalgdm3/TrailRun/focalgdm3
     dest: ./
     mode: u+rwx,g-rwx,o-rwx
 
