@@ -1,0 +1,19 @@
+---
+- name: Download PIA vpn files
+  get_url:
+    url: https://www.privateinternetaccess.com/openvpn/openvpn.zip
+    dest: ./openvpn.zip
+
+- name: Unzip PIA files
+  unarchive:
+      src: tasks/openvpn.zip
+      dest: ./
+
+- name: Install PIA config
+  command:
+    cmd: nmcli connection import type openvpn file ./netherlands.ovpn
+
+- name: Cleanup PIA
+  file:
+    path: ./openvpn.zip
+    state: absent
