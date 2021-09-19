@@ -14,7 +14,6 @@
       - exfat-utils
       - gtkhash
       - virtualbox
-      - virtualbox-ext-pack
       - gnome-tweak-tool
       - libglib2.0-dev
     state: latest
