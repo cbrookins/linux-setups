@@ -6,7 +6,7 @@
 
 - name: Unzip PIA files
   unarchive:
-      src: tasks/openvpn.zip
+      src: ./openvpn.zip
       dest: ./
 
 - name: Install PIA config
