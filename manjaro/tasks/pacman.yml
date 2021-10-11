@@ -1,8 +1,9 @@
 ---
-- name: Install package foo from repo
+- name: Install packages
   community.general.pacman:
     name:
       - cura
       - timeshift
+      - flatpak
     state: present
   become: yes
