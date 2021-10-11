@@ -5,3 +5,4 @@
       - cura
       - timeshift
     state: present
+  become: yes
