@@ -13,4 +13,4 @@
     - include_tasks: ubuntu/ubuntu.yml
       when: ansible_facts['distribution'] == "Ubuntu"
     - include_tasks: manjaro/manjaro.yml
-      when: ansible_facts['distribution'] == "Manjaro"
+      when: ansible_facts['lsb']['description'] == "Manjaro Linux"
