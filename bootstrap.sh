@@ -15,6 +15,9 @@ if command -v apt >/dev/null 2>&1; then
 	sudo apt install -y git ansible
 fi
 
+if command -v pacman >/dev/null 2>&1; then
+	sudo pacman -Sy --noconfirm ansible
+fi
 
 git clone https://github.com/therealc2c2/linux-setups && cd linux-setups
 
