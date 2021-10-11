@@ -1,0 +1,7 @@
+---
+- name: Install package foo from repo
+  community.general.pacman:
+    name:
+      - cura
+      - timeshift
+    state: present
