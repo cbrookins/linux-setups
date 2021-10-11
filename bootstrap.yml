@@ -12,3 +12,5 @@
       when: ansible_facts['distribution'] == "Fedora"
     - include_tasks: ubuntu/ubuntu.yml
       when: ansible_facts['distribution'] == "Ubuntu"
+    - include_tasks: manjaro/manjaro.yml
+      when: ansible_facts['distribution'] == "Manjaro"
