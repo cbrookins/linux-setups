@@ -1,0 +1,12 @@
+---
+- name: Install software
+  apt:
+    name:
+      - git
+      - ansible
+      - exfat-fuse
+      - exfat-utils
+      - gtkhash
+      - virtualbox
+    state: latest
+  become: yes
