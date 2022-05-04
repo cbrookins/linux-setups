@@ -1,7 +1,7 @@
 # Linux Setup Scripts
 Various Linux workstation setup scripts.
 
-Ubuntu doesn't come with Curl pre-installed so the following will take care of that
+Ubuntu and Elementary do not come with Curl pre-installed so the following will take care of that
 ```
 sudo apt update -y && sudo apt install curl -y
 ```
