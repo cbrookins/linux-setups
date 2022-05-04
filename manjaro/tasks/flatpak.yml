@@ -13,3 +13,4 @@
       - org.videolan.VLC
       - cc.arduino.arduinoide
       - com.discordapp.Discord
+      - com.brave.Browser

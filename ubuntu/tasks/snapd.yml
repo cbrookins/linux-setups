@@ -12,4 +12,5 @@
     name:
       - teams
       - zoom-client
+      - brave
   become: yes

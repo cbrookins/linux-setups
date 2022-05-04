@@ -15,6 +15,6 @@
       - org.gtkhash.gtkhash
       - us.zoom.Zoom
       - com.microsoft.Teams
-      - com.spotify.Client
       - com.uploadedlobster.peek
+      - com.brave.Browser
   become: yes
