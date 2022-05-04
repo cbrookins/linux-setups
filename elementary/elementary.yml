@@ -2,5 +2,5 @@
   - include_tasks: tasks/update.yml
   - include_tasks: tasks/apt.yml
   - include_tasks: tasks/flatpak.yml
-#  - include_tasks: tasks/pia.yml
+  - include_tasks: tasks/pia.yml
   - include_tasks: tasks/reboot.yml
