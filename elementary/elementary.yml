@@ -3,4 +3,5 @@
   - include_tasks: tasks/apt.yml
   - include_tasks: tasks/flatpak.yml
   - include_tasks: tasks/pia.yml
+    when: ansible_facts['product_name'] is not match("*Latitude*")
   - include_tasks: tasks/reboot.yml
