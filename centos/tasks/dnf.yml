@@ -9,7 +9,7 @@
     file: microsoft
     baseurl: https://packages.microsoft.com/rhel/8/prod
   become: yes
-  
+
 - name: Add Epel
   dnf:
     name: 
