@@ -13,4 +13,4 @@ jobs:
       - name: Ansible Lint
         uses: ansible/ansible-lint-action@main
         with:
-         args: "bootstrap.yml"
+         path: "bootstrap.yml"
