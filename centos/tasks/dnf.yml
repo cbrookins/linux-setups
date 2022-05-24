@@ -1,6 +1,6 @@
 ---
 - name: Add Microsoft repository
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: rhel
     enabled: yes
     gpgcheck: yes
@@ -11,26 +11,26 @@
   become: yes
 
 - name: Add Epel
-  dnf:
-    name: 
+  ansible.builtin.dnf:
+    name:
       - http://download.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
     state: present
     disable_gpg_check: yes
   become: yes
-  
+
 - name: Add CentOS Plus
-  yum_repository:
+   ansible.builtin.yum_repository:
     name: centosplus
     enabled: yes
     gpgcheck: yes
     gpgkey: http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-8
     description: CentOS Plus repos
     file: centos-plus
-    mirrorlist: http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus 
+    mirrorlist: http://mirrorlist.centos.org/?release=$releasever&arch=$basearch&repo=centosplus
   become: yes
 
 - name: Install packages
-  dnf:
+  ansible.builtin.dnf:
     name:
       - curl
       - git
