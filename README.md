@@ -1,3 +1,5 @@
+[![Ansible Lint](https://github.com/theRealc2c2/linux-setups/actions/workflows/ansible-lint.yml/badge.svg?branch=main)](https://github.com/theRealc2c2/linux-setups/actions/workflows/ansible-lint.yml)
+
 # Linux Setup Scripts
 Various Linux workstation setup scripts.
 
