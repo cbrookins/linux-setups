@@ -1,7 +1,7 @@
 ---
 - name: Download focalgdm3
   get_url: 
-    url: https://raw.githubusercontent.com/theRealc2c2/ubuntu-gdm-set-background/main/ubuntu-gdm-set-background
+    url: https://raw.githubusercontent.com/cbrookins/ubuntu-gdm-set-background/main/ubuntu-gdm-set-background
     dest: ./
     mode: u+rwx,g-rwx,o-rwx
 
