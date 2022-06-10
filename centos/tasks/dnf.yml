@@ -19,7 +19,7 @@
   become: yes
 
 - name: Add CentOS Plus
-   ansible.builtin.yum_repository:
+  ansible.builtin.yum_repository:
     name: centosplus
     enabled: yes
     gpgcheck: yes
