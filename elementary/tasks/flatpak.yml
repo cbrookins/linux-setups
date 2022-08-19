@@ -12,3 +12,4 @@
       - org.gnome.seahorse.Application
       - org.videolan.VLC
       - org.mozilla.firefox
+      - com.google.Chrome
