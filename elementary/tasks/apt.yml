@@ -8,5 +8,8 @@
       - exfat-utils
       - gtkhash
       - virtualbox
+      - build-essentials
+      - dkms
+      - linux-headers-generic
     state: latest
   become: yes
