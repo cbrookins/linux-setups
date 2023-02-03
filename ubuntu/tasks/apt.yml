@@ -11,10 +11,8 @@
       - git
       - ansible
       - exfat-fuse
-      - exfat-utils
       - gtkhash
       - virtualbox
-      - gnome-tweak-tool
       - libglib2.0-dev
       - network-manager-openconnect-gnome
     state: latest
