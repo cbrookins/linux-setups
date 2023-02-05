@@ -1,44 +1,44 @@
 ---
 - name: Add EPEL repository
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: epel
     description: EPEL repo
     baseurl: https://download.fedoraproject.org/pub/epel/{{ansible_distribution_major_version}}/$basearch/
-  become: yes
+  become: true
 
 - name: Add Microsoft repository (1/2)
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: fedora
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
     description: Microsoft repos
     file: microsoft
     baseurl: https://packages.microsoft.com/fedora/{{ansible_distribution_major_version}}/prod
-  become: yes
+  become: true
 
 - name: Add Microsoft repository (2/2)
-  yum_repository:
+  ansible.builtin.yum_repository:
     name: rhel
-    enabled: yes
-    gpgcheck: yes
+    enabled: true
+    gpgcheck: true
     gpgkey: https://packages.microsoft.com/keys/microsoft.asc
     description: Microsoft repos
     file: microsoft
     baseurl: https://packages.microsoft.com/rhel/8/prod
-  become: yes
+  become: true
 
 - name: Add RPM Fusion repositories
-  dnf:
+  ansible.builtin.dnf:
     name: 
       - https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ansible_distribution_major_version}}.noarch.rpm
       - https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ansible_distribution_major_version}}.noarch.rpm
     state: present
-    disable_gpg_check: yes
-  become: yes
+    disable_gpg_check: true
+  become: true
 
 - name: Install packages
-  dnf:
+  ansible.builtin.dnf:
     name:
       - arduino
       - curl
@@ -69,6 +69,6 @@
       - powershell
       - hdparm
       - pv
-    update_cache: yes
+    update_cache: true
     state: present
   become: true

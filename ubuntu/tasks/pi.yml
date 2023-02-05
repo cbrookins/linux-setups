@@ -1,12 +1,12 @@
 ---
 - name: Add Ubuntu main/universe/restricted
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} main universe restricted
     state: present
   become: true
 
 - name: Install software
-  apt:
+  ansible.builtin.apt:
     name:
       - docker
       - docker-compose
@@ -18,3 +18,4 @@
     name: ubuntu
     groups: docker
   append: true
+  

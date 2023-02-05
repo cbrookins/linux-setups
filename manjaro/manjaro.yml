@@ -1,4 +1,4 @@
----  
+---
 - name: Update
   ansible.builtin.include_tasks: tasks/update.yml
 
@@ -13,3 +13,4 @@
 
 - name: Reboot
   ansible.builtin.include_tasks: tasks/reboot.yml
+  

@@ -7,3 +7,4 @@
       - flatpak
     state: present
   become: true
+  

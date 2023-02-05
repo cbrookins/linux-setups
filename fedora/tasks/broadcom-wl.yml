@@ -6,7 +6,7 @@
 
 - name: Verify needed packages
   ansible.builtin.dnf:
-    name: 
+    name:
       - kernel-devel
       - broadcom-wl
       - dkms
@@ -20,3 +20,4 @@
   ansible.builtin.file:
     path: ./broadcom-wl
     state: absent
+    

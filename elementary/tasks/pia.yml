@@ -1,13 +1,13 @@
 ---
 - name: Download PIA vpn files
-  get_url:
+  ansible.builtin.get_url:
     url: https://www.privateinternetaccess.com/openvpn/openvpn.zip
     dest: ./openvpn.zip
 
 - name: Unzip PIA files
-  unarchive:
-      src: ./openvpn.zip
-      dest: ./
+  ansible.builtin.unarchive:
+    src: ./openvpn.zip
+    dest: ./
 
 - name: Install PIA config
   ansible.builtin.command:
@@ -17,3 +17,4 @@
   ansible.builtin.file:
     path: ./openvpn.zip
     state: absent
+    
