@@ -13,7 +13,7 @@
   ansible.builtin.command:
     cmd: nmcli connection import type openvpn file ./netherlands.ovpn
   changed_when: false
-  
+
 - name: Cleanup PIA
   ansible.builtin.file:
     path: ./openvpn.zip
