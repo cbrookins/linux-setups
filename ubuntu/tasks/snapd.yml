@@ -10,7 +10,6 @@
 - name: Install snaps
   community.general.snap:
     name:
-      - teams
       - zoom-client
-      - brave
+      - chromium
   become: yes
