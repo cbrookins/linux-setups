@@ -4,12 +4,12 @@
     name:
       - code
       - powershell
-    classic: yes
-  become: yes
+    classic: true
+  become: true
     
 - name: Install snaps
   community.general.snap:
     name:
       - zoom-client
       - chromium
-  become: yes
+  become: true

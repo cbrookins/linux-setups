@@ -6,4 +6,4 @@
       - timeshift
       - flatpak
     state: present
-  become: yes
+  become: true

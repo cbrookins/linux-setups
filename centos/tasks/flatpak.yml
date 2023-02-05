@@ -4,7 +4,7 @@
     name: flathub
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-  become: yes
+  become: true
 
 - name: Install flatpaks
   community.general.flatpak:
@@ -17,4 +17,4 @@
       - com.microsoft.Teams
       - com.uploadedlobster.peek
       - com.brave.Browser
-  become: yes
+  become: true

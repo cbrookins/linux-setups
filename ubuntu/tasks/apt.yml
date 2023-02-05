@@ -3,7 +3,7 @@
   apt_repository:
     repo: deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} main universe restricted
     state: present
-  become: yes
+  become: true
 
 - name: Install software
   apt:
@@ -19,4 +19,4 @@
       - gnome-session
       - gnome-screenshot
     state: present
-  become: yes
+  become: true

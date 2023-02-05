@@ -10,10 +10,10 @@
       dest: ./
 
 - name: Install PIA config
-  command:
+  ansible.builtin.command:
     cmd: nmcli connection import type openvpn file ./netherlands.ovpn
 
 - name: Cleanup PIA
-  file:
+  ansible.builtin.file:
     path: ./openvpn.zip
     state: absent

@@ -3,4 +3,4 @@
   ansible.builtin.dnf:
     name: "*"
     state: latest
-  become: yes
+  become: true

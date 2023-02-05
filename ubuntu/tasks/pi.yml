@@ -3,7 +3,7 @@
   apt_repository:
     repo: deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} main universe restricted
     state: present
-  become: yes
+  become: true
 
 - name: Install software
   apt:
@@ -11,10 +11,10 @@
       - docker
       - docker-compose
     state: latest
-  become: yes
+  become: true
 
-  - name: Add ubuntu to docker group
+- name: Add ubuntu to docker group
   ansible.builtin.user:
     name: ubuntu
     groups: docker
-    append: yes
+  append: true

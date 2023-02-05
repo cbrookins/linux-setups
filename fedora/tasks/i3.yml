@@ -22,7 +22,7 @@
       - alsa-utils
       - rxvt-unicode
     state: latest
-  become: yes
+  become: true
 
 - name: Touch .xinitrc
   file:

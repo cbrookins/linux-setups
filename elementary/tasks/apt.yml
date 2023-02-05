@@ -14,4 +14,4 @@
       - dkms
       - linux-headers-generic
     state: present
-  become: yes
+  become: true

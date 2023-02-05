@@ -1,9 +1,9 @@
 ---
-  - name: Update
-    ansible.builtin.include_tasks: tasks/update.yml
-  - name: DNF
-    ansible.builtin.include_tasks: tasks/dnf.yml
-  - name: Flatpak
-    ansible.builtin.include_tasks: tasks/flatpak.yml
-  - name: Reboot
-    ansible.builtin.include_tasks: tasks/reboot.yml
+- name: Update
+  ansible.builtin.include_tasks: tasks/update.yml
+- name: DNF
+  ansible.builtin.include_tasks: tasks/dnf.yml
+- name: Flatpak
+  ansible.builtin.include_tasks: tasks/flatpak.yml
+- name: Reboot
+  ansible.builtin.include_tasks: tasks/reboot.yml
