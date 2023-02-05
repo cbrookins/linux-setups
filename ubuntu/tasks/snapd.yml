@@ -6,7 +6,7 @@
       - powershell
     classic: true
   become: true
-    
+
 - name: Install snaps
   community.general.snap:
     name:

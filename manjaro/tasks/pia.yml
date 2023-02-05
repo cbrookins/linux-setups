@@ -6,8 +6,8 @@
 
 - name: Unzip PIA files
   ansible.builtin.unarchive:
-      src: ./openvpn.zip
-      dest: ./
+    src: ./openvpn.zip
+    dest: ./
 
 - name: Install PIA config
   ansible.builtin.command:
