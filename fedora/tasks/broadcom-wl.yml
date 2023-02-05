@@ -15,6 +15,7 @@
 - name: Install kernel module
   ansible.builtin.command:
     cmd: dkms add ./broadcom-wl
+  changed_when: false
 
 - name: Cleanup broadcom-wl
   ansible.builtin.file:
