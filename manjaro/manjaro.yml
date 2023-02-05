@@ -13,4 +13,3 @@
 
 - name: Reboot
   ansible.builtin.include_tasks: tasks/reboot.yml
-  

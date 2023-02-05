@@ -7,3 +7,4 @@
   ansible.builtin.include_tasks: tasks/flatpak.yml
 - name: Reboot
   ansible.builtin.include_tasks: tasks/reboot.yml
+  

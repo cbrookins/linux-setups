@@ -18,4 +18,3 @@
   when: ansible_facts['memtotal_mb'] > 1000
 - name: Reboot
   ansible.builtin.include_tasks: tasks/reboot.yml
-  

@@ -2,3 +2,4 @@
 - name: Reboot
   ansible.builtin.command:
     cmd: shutdown -r now
+    
