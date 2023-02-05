@@ -1,10 +1,15 @@
 ---  
-  - include_tasks: tasks/update.yml
+  - name: Update
+    ansible.builtin.include_tasks: tasks/update.yml
   
-  - include_tasks: tasks/pacman.yml
+  - name: Pacman
+    ansible.builtin.include_tasks: tasks/pacman.yml
   
-  - include_tasks: tasks/flatpak.yml
+  - name: Flatpak
+    ansible.builtin.include_tasks: tasks/flatpak.yml
   
-  - include_tasks: tasks/pia.yml
+  - name: Pia
+    ansible.builtin.include_tasks: tasks/pia.yml
   
-  - include_tasks: tasks/reboot.yml
+  - name: Reboot
+    ansible.builtin.include_tasks: tasks/reboot.yml

@@ -6,13 +6,18 @@
     - default.config.yml
 
   tasks:
-    - include_tasks: centos/centos.yml
+    - name: "CentOS"
+      ansible.builtin.include_tasks: centos/centos.yml
       when: ansible_facts['distribution'] == "CentOS"
-    - include_tasks: fedora/fedora.yml
+    - name: Fedora
+      ansible.builtin.include_tasks: fedora/fedora.yml
       when: ansible_facts['distribution'] == "Fedora"
-    - include_tasks: ubuntu/ubuntu.yml
+    - name: Ubuntu
+      ansible.builtin.include_tasks: ubuntu/ubuntu.yml
       when: ansible_facts['distribution'] == "Ubuntu"
-    - include_tasks: manjaro/manjaro.yml
+    - name: Manjaro
+      ansible.builtin.include_tasks: manjaro/manjaro.yml
       when: ansible_facts['lsb']['description'] == "Manjaro Linux"
-    - include_tasks: elementary/elementary.yml
+    - name: Elementary OS
+      ansible.builtin.include_tasks: elementary/elementary.yml
       when: ansible_facts['distribution'] == "elementary OS"

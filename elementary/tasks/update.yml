@@ -1,7 +1,7 @@
   
 ---
 - name: Update packages
-  apt:
+  ansible.builtin.apt:
     name: "*"
     state: latest
   become: yes

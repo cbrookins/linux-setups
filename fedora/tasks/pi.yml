@@ -1,10 +1,12 @@
 ---
 - name: Extend partition
-  command: growpart /dev/mmcblk0 3
+  ansible.builtin.command: 
+    cmd: growpart /dev/mmcblk0 3
   ignore_errors: yes
   become: yes
   
 - name: Extend volume
-  command: resize2fs /dev/mmcblk0p3
+  ansible.builtin.command: 
+    cmd: resize2fs /dev/mmcblk0p3
   ignore_errors: yes
   become: yes

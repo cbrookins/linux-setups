@@ -1,6 +1,6 @@
 ---
 - name: Update packages
-  dnf:
+  ansible.builtin.dnf:
     name: "*"
     state: latest
   become: yes

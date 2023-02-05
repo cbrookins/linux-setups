@@ -1,19 +1,26 @@
 ---
-  - include_tasks: tasks/pi.yml
+  - name: Pi
+    ansible.builtin.include_tasks: tasks/pi.yml
     when: ansible_facts['architecture'] == 'armv7l'
   
-  - include_tasks: tasks/update.yml
+  - name: Update
+    ansible.builtin.include_tasks: tasks/update.yml
   
-  - include_tasks: tasks/dnf.yml
+  - name: DNF
+    ansible.builtin.include_tasks: tasks/dnf.yml
     when: ansible_facts['memtotal_mb'] > 1000
   
-  - include_tasks: tasks/flatpak.yml
+  - name: Flatpak
+    ansible.builtin.include_tasks: tasks/flatpak.yml
     when: ansible_facts['memtotal_mb'] > 1000
   
-  - include_tasks: tasks/broadcom-wl.yml
+  - name: Broadcom Wireless
+    ansible.builtin.include_tasks: tasks/broadcom-wl.yml
     when: ansible_facts['product_name'] == '334777U'
   
-  - include_tasks: tasks/pia.yml
+  - name: PIA
+    ansible.builtin.include_tasks: tasks/pia.yml
     when: ansible_facts['memtotal_mb'] > 1000
   
-  - include_tasks: tasks/reboot.yml
+  - name: Reboot
+    ansible.builtin.include_tasks: tasks/reboot.yml

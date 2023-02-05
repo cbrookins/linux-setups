@@ -1,7 +1,12 @@
 ---
-  - include_tasks: tasks/update.yml
-  - include_tasks: tasks/apt.yml
-  - include_tasks: tasks/flatpak.yml
-  - include_tasks: tasks/pia.yml
+  - name: Update
+    ansible.builtin.include_tasks: tasks/update.yml
+  - name: Apt
+    ansible.builtin.include_tasks: tasks/apt.yml
+  - name: Flatpak
+    ansible.builtin.include_tasks: tasks/flatpak.yml
+  - name: PIA
+    ansible.builtin.include_tasks: tasks/pia.yml
     when: ansible_facts['product_name'] is not match("Latitude*")
-  - include_tasks: tasks/reboot.yml
+  - name: Reboot
+    ansible.builtin.include_tasks: tasks/reboot.yml

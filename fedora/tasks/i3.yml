@@ -1,6 +1,6 @@
 ---
 - name: Install i3
-  dnf:
+  ansible.builtin.dnf:
     name:
       - '@i3 desktop'
       - exfatprogs

@@ -13,5 +13,5 @@
       - build-essentials
       - dkms
       - linux-headers-generic
-    state: latest
+    state: present
   become: yes

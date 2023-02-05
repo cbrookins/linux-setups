@@ -44,5 +44,5 @@
       - powershell
       - virt-manager
     update_cache: yes
-    state: latest
+    state: present
   become: yes

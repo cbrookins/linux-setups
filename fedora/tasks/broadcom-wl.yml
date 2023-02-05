@@ -5,7 +5,7 @@
     dest: ./broadcom-wl
 
 - name: Verify needed packages
-  dnf:
+  ansible.builtin.dnf:
     name: 
       - kernel-devel
       - broadcom-wl
@@ -13,7 +13,7 @@
     state: present
 
 - name: Install kernel module
-  command:
+  ansible.builtin.command:
     cmd: dkms add ./broadcom-wl
 
 - name: Cleanup broadcom-wl

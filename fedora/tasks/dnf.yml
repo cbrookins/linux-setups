@@ -70,5 +70,5 @@
       - hdparm
       - pv
     update_cache: yes
-    state: latest
+    state: present
   become: yes

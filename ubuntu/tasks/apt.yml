@@ -18,5 +18,5 @@
       - network-manager-openconnect-gnome
       - gnome-session
       - gnome-screenshot
-    state: latest
+    state: present
   become: yes
