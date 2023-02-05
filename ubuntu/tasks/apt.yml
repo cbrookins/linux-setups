@@ -16,5 +16,6 @@
       - libglib2.0-dev
       - network-manager-openconnect-gnome
       - gnome-session
+      - gnome-screenshot
     state: latest
   become: yes
