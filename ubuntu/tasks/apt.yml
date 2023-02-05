@@ -15,5 +15,6 @@
       - virtualbox
       - libglib2.0-dev
       - network-manager-openconnect-gnome
+      - gnome-session
     state: latest
   become: yes
