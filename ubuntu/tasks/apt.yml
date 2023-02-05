@@ -13,6 +13,7 @@
       - exfat-fuse
       - gtkhash
       - virtualbox
+      - virtualbox-ext-pack
       - libglib2.0-dev
       - network-manager-openconnect-gnome
       - gnome-session
