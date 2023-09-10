@@ -3,6 +3,7 @@
   ansible.builtin.get_url:
     url: https://www.privateinternetaccess.com/openvpn/openvpn.zip
     dest: ./openvpn.zip
+    mode: '0644'
 
 - name: Unzip PIA files
   ansible.builtin.unarchive:
