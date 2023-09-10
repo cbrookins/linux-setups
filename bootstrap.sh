@@ -19,7 +19,7 @@ if command -v pacman >/dev/null 2>&1; then
 	sudo pacman -Sy --noconfirm ansible
 fi
 
-git clone https://github.com/cbrookins/linux-setups && cd linux-setups
+git clone https://codeberg.org/cbrookins/linux-setups && cd linux-setups
 
 ansible-galaxy collection install community.general
 ansible-playbook bootstrap.yml

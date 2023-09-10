@@ -5,12 +5,10 @@
       - git
       - ansible
       - exfat-fuse
-      - exfat-utils
       - gtkhash
       - virtualbox
       - virtualbox-ext-pack
       - virtualbox-dkms
-      - build-essentials
       - dkms
       - linux-headers-generic
     state: present
