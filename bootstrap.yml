@@ -6,12 +6,6 @@
     - default.config.yml
 
   tasks:
-    - name: "CentOS"
-      ansible.builtin.include_tasks: centos/centos.yml
-      when: ansible_facts['distribution'] == "CentOS"
-    - name: Fedora
-      ansible.builtin.include_tasks: fedora/fedora.yml
-      when: ansible_facts['distribution'] == "Fedora"
     - name: Ubuntu
       ansible.builtin.include_tasks: ubuntu/ubuntu.yml
       when: ansible_facts['distribution'] == "Ubuntu"

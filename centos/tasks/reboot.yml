@@ -1,5 +1,0 @@
----
-- name: Reboot
-  ansible.builtin.command:
-    cmd: shutdown -r now
-  changed_when: false
