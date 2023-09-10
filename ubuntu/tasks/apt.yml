@@ -1,7 +1,7 @@
 ---
 - name: Add Ubuntu main/universe/restricted
   ansible.builtin.apt_repository:
-    repo: deb http://archive.ubuntu.com/ubuntu {{ansible_distribution_release}} main universe restricted
+    repo: deb http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release }} main universe restricted
     state: present
   become: true
 
