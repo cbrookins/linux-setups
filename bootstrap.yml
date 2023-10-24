@@ -12,3 +12,6 @@
     - name: Elementary OS
       ansible.builtin.include_tasks: elementary/elementary.yml
       when: ansible_facts['distribution'] == "elementary OS"
+    - name: Pop! OS
+      ansible.builtin.include_tasks: popos/popos.yml
+      when: ansible_facts['distribution'] == "Pop!_OS"
