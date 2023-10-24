@@ -1,0 +1,21 @@
+---
+- name: Download PIA vpn files
+  ansible.builtin.get_url:
+    url: https://www.privateinternetaccess.com/openvpn/openvpn.zip
+    dest: ./openvpn.zip
+    mode: '0644'
+
+- name: Unzip PIA files
+  ansible.builtin.unarchive:
+    src: ./openvpn.zip
+    dest: ./
+
+- name: Install PIA config
+  ansible.builtin.command:
+    cmd: nmcli connection import type openvpn file ./netherlands.ovpn
+  changed_when: false
+
+- name: Cleanup PIA
+  ansible.builtin.file:
+    path: ./openvpn.zip
+    state: absent

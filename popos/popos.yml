@@ -1,0 +1,14 @@
+---
+- name: Update
+  ansible.builtin.include_tasks: tasks/update.yml
+- name: Apt
+  ansible.builtin.include_tasks: tasks/apt.yml
+- name: Misc
+  ansible.builtin.include_tasks: tasks/misc.yml
+- name: Flatpak
+  ansible.builtin.include_tasks: tasks/flatpak.yml
+- name: PIA
+  ansible.builtin.include_tasks: tasks/pia.yml
+  when: ansible_facts['product_name'] is not match("20A8*") and ansible_facts['product_name'] is not match("Latitude*")
+- name: Reboot
+  ansible.builtin.include_tasks: tasks/reboot.yml
