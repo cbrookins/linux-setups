@@ -15,4 +15,6 @@
       - ubuntu-restricted-extras
       - timeshift
     state: present
+  environment:
+    ACCEPT_EULA: 'y'
   become: true
