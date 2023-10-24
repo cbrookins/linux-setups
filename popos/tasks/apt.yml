@@ -1,10 +1,4 @@
 ---
-- name: Add Ubuntu main/universe/restricted
-  ansible.builtin.apt_repository:
-    repo: deb http://archive.ubuntu.com/ubuntu {{ ansible_distribution_release }} main universe restricted
-    state: present
-  become: true
-
 - name: Install software
   ansible.builtin.apt:
     name:
@@ -18,5 +12,7 @@
       - network-manager-openconnect-gnome
       - gnome-session
       - gnome-screenshot
+      - ubuntu-restricted-extras
+      - timeshift
     state: present
   become: true
