@@ -1,4 +1,4 @@
-[![Ansible Lint](https://github.com/cbrookins/linux-setups/actions/workflows/ansible-lint.yml/badge.svg?branch=main)](https://github.com/theRealc2c2/linux-setups/actions/workflows/ansible-lint.yml)
+[![Ansible Lint](https://github.com/cbrookins/linux-setups/actions/workflows/ansible-lint.yml/badge.svg?branch=main)](https://github.com/cbrookins/linux-setups/actions/workflows/ansible-lint.yml)
 
 # Linux Setup Scripts
 Various Linux workstation setup scripts.
@@ -9,7 +9,7 @@ sudo apt update -y && sudo apt install curl -y
 ```
 Bootstrap
 ```
-curl https://raw.githubusercontent.com/cbrookins/linux-setups/main/bootstrap.sh | sh
+curl https://codeberg.org/cbrookins/linux-setups/raw/branch/main/bootstrap.sh | sh
 ```
 
 ***
